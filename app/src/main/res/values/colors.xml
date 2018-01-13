@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="main_color">#00c3ff</color>
+    <color name="main_search_round_border">#979797</color>
+    <color name="main_search_round_background">#f3f3f3</color>
+    <color name="main_bag_round_background">#00c3ff</color>
+    <color name="main_bag_round_border">#ffffff</color>
+    <color name="f1_section2_bottomborder_color">#88e2e2e2</color>
+</resources>

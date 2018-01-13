@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:elevation="1dp">
+
+        <ImageButton
+            android:id="@+id/main_menu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/menu" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="14dp"
+            android:layout_toLeftOf="@+id/main_bag"
+            android:layout_toRightOf="@id/main_menu"
+            android:background="@drawable/main_search_round"
+            android:cursorVisible="false"
+            android:drawableLeft="@drawable/group"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:hint="흠 내가 원하는 원단이 뭐였지?"
+            android:paddingLeft="13dp"
+            android:paddingRight="14dp"
+            android:textColor="#000000"
+            android:textColorHint="#d5d5d5"
+            android:textSize="10dp" />
+
+
+        <ImageButton
+            android:id="@+id/main_bag"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="11dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/shopping_bag" />
+
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="11dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/main_bag_round"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="#ffffff"
+            android:textSize="8dp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.Toolbar>

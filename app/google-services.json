@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "341326755498",
+    "firebase_url": "https://projectuic-191503.firebaseio.com",
+    "project_id": "projectuic-191503",
+    "storage_bucket": "projectuic-191503.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341326755498:android:5e2b83083149f1ec",
+        "android_client_info": {
+          "package_name": "com.startup.uic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341326755498-6vpc6rikhui1rfns8nm1jqbbhh5u3k5j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAddBbze2bPauScYxtSwDxrtDurHai_V4U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
