@@ -19,6 +19,8 @@ import com.squareup.picasso.Picasso;
 public class F1_Section2_CardFragment extends Fragment {
 
     private CardView cardView;
+    View itemview;
+    private ImageView imageView;
     final static String url = "http://rkswlrbduf.cafe24.com/Uic/Image/";
 
     public static Fragment getInstance(int position) {
@@ -40,11 +42,25 @@ public class F1_Section2_CardFragment extends Fragment {
         cardView = (CardView) view.findViewById(R.id.cardView);
         cardView.setMaxCardElevation(cardView.getCardElevation() * CardAdapter.MAX_ELEVATION_FACTOR);
 
-        Picasso.with(getContext()).load(url+"f1_section2_1.png").fit().centerCrop().into((ImageView)view.findViewById(R.id.row1_rankingitem_image));
-        Picasso.with(getContext()).load(url+"f1_section2_2.png").fit().centerCrop().into((ImageView)view.findViewById(R.id.row2_rankingitem_image));
-        Picasso.with(getContext()).load(url+"f1_section2_3.png").fit().centerCrop().into((ImageView)view.findViewById(R.id.row3_rankingitem_image));
-        Picasso.with(getContext()).load(url+"f1_section2_4.png").fit().centerCrop().into((ImageView)view.findViewById(R.id.row4_rankingitem_image));
-        Picasso.with(getContext()).load(url+"f1_section2_5.png").fit().centerCrop().into((ImageView)view.findViewById(R.id.row5_rankingitem_image));
+        itemview = view.findViewById(R.id.f1_section2_row1_container);
+        imageView = (ImageView)itemview.findViewById(R.id.f1_section2_rankingitem_image);
+        Picasso.with(getContext()).load(url+"f1_section2_1.png").fit().centerCrop().into(imageView);
+
+        itemview = view.findViewById(R.id.f1_section2_row2_container);
+        imageView = (ImageView)itemview.findViewById(R.id.f1_section2_rankingitem_image);
+        Picasso.with(getContext()).load(url+"f1_section2_2.png").fit().centerCrop().into(imageView);
+
+        itemview = view.findViewById(R.id.f1_section2_row3_container);
+        imageView = (ImageView)itemview.findViewById(R.id.f1_section2_rankingitem_image);
+        Picasso.with(getContext()).load(url+"f1_section2_3.png").fit().centerCrop().into(imageView);
+
+        itemview = view.findViewById(R.id.f1_section2_row4_container);
+        imageView = (ImageView)itemview.findViewById(R.id.f1_section2_rankingitem_image);
+        Picasso.with(getContext()).load(url+"f1_section2_4.png").fit().centerCrop().into(imageView);
+
+        itemview = view.findViewById(R.id.f1_section2_row5_container);
+        imageView = (ImageView)itemview.findViewById(R.id.f1_section2_rankingitem_image);
+        Picasso.with(getContext()).load(url+"f1_section2_5.png").fit().centerCrop().into(imageView);
 
         return view;
     }

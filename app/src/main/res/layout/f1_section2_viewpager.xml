@@ -18,7 +18,7 @@
         android:gravity="top"
         android:paddingTop="18dp">
 
-        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/row1_container"
@@ -89,7 +89,14 @@
                 android:textSize="8sp"
                 app:fontName="Custom1" />
 
-        </RelativeLayout>
+        </RelativeLayout>-->
+
+        <include layout="@layout/f1_section2_viewpager_row" android:id="@+id/f1_section2_row1_container" android:layout_height="46dp" android:layout_width="match_parent"/>
+        <include layout="@layout/f1_section2_viewpager_row" android:id="@+id/f1_section2_row2_container" android:layout_height="46dp" android:layout_width="match_parent" android:layout_below="@+id/f1_section2_row1_container"/>
+        <include layout="@layout/f1_section2_viewpager_row" android:id="@+id/f1_section2_row3_container" android:layout_height="46dp" android:layout_width="match_parent" android:layout_below="@+id/f1_section2_row2_container"/>
+        <include layout="@layout/f1_section2_viewpager_row" android:id="@+id/f1_section2_row4_container" android:layout_height="46dp" android:layout_width="match_parent" android:layout_below="@+id/f1_section2_row3_container"/>
+        <include layout="@layout/f1_section2_viewpager_row" android:id="@+id/f1_section2_row5_container" android:layout_height="46dp" android:layout_width="match_parent" android:layout_below="@+id/f1_section2_row4_container"/>
+<!--
 
         <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -382,11 +389,12 @@
                 app:fontName="Custom1" />
 
         </RelativeLayout>
+-->
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/row5_container"
+            android:layout_below="@id/f1_section2_row5_container"
             android:background="#ffffff"
             android:gravity="center"
             android:paddingBottom="17dp"

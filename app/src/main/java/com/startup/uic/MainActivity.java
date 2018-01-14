@@ -33,18 +33,23 @@ public class MainActivity extends Main_Font_AppCompatFontActivity {
 
     boolean OPENED = false;
 
-    ViewPager viewPager;
+    public Main_Viewpager viewPager;
     TabLayout tabLayout;
-/*    ImageButton menu;
+    ImageButton menu;
     DrawerLayout drawerLayout;
-    CoordinatorLayout coordinatorLayout;*/
+    CoordinatorLayout coordinatorLayout;
+
+    F1_RecyclerviewAdapter.MainCallback mainCallback;
+    F1_RecyclerviewAdapter M2AcallBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
 
-        FingerPushManager.getInstance(getApplicationContext()).setDevice(new NetworkUtility.ObjectListener() {
+
+
+/*        FingerPushManager.getInstance(getApplicationContext()).setDevice(new NetworkUtility.ObjectListener() {
             @Override
             public void onComplete(String s, String s1, JSONObject jsonObject) {
                 Log.d("TAG", s + " " + s1 + " " + jsonObject);
@@ -54,7 +59,7 @@ public class MainActivity extends Main_Font_AppCompatFontActivity {
             public void onError(String s, String s1) {
                 Log.d("TAG", s + " " + s1);
             }
-        });
+        });*/
 
         Window window = getWindow();
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
@@ -63,11 +68,11 @@ public class MainActivity extends Main_Font_AppCompatFontActivity {
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         window.setStatusBarColor(Color.parseColor("#00c3ff"));
 
-        viewPager = (ViewPager)findViewById(R.id.main_viewpager);
+        viewPager = (Main_Viewpager)findViewById(R.id.main_viewpager);
         tabLayout = (TabLayout)findViewById(R.id.main_tablayout);
-/*        menu = (ImageButton)findViewById(R.id.main_menu);
+        menu = (ImageButton)findViewById(R.id.main_menu);
         drawerLayout = (DrawerLayout)findViewById(R.id.main_drawer_layout);
-        coordinatorLayout = (CoordinatorLayout)findViewById(R.id.main_container);*/
+        coordinatorLayout = (CoordinatorLayout)findViewById(R.id.main_container);
 
         tabLayout.addTab(tabLayout.newTab().setCustomView(InflateTab(getApplicationContext(),"신상품")));
         tabLayout.addTab(tabLayout.newTab().setCustomView(InflateTab(getApplicationContext(),"떙처리")));
@@ -96,8 +101,25 @@ public class MainActivity extends Main_Font_AppCompatFontActivity {
 
             }
         });
+        M2AcallBack = new F1_RecyclerviewAdapter();
 
-/*        drawerLayout.setDrawerElevation(0f);
+
+        mainCallback = new F1_RecyclerviewAdapter.MainCallback() {
+            @Override
+            public Main_Viewpager mainCallback() {
+                return (Main_Viewpager)findViewById(R.id.main_viewpager);
+            }
+        };
+        M2AcallBack.doWork(mainCallback);
+/*
+        viewPagerCallback = new Main_Viewpager.ViewPagerCallback() {
+            @Override
+            public boolean viewPagercallback() {
+
+            }
+        };*/
+
+        drawerLayout.setDrawerElevation(0f);
         drawerLayout.setDrawerListener(new Main_DrawerSlideListener(getApplicationContext(), coordinatorLayout, drawerLayout));
         drawerLayout.setScrimColor(Color.TRANSPARENT);
 
@@ -110,7 +132,7 @@ public class MainActivity extends Main_Font_AppCompatFontActivity {
                     drawerLayout.closeDrawer(Gravity.LEFT);
                 }
             }
-        });*/
+        });
 
     }
 
@@ -122,5 +144,8 @@ public class MainActivity extends Main_Font_AppCompatFontActivity {
         name.setText(string);
         return view;
     }
+
+
+
 
 }

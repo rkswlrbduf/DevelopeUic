@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,12 +37,23 @@ public class F1_RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     View view;
     FragmentManager fm;
 
-
     int currentPage = 0;
     Timer timer;
     final long DELAY_MS = 500;
     final long PERIOD_MS = 3000;
 
+    MainCallback callback;
+    Main_Viewpager mainViewpager;
+
+    private Boolean EDGE = true;
+    private Boolean NOT_EDGE = false;
+
+    public F1_RecyclerviewAdapter() {
+    }
+
+    public void doWork(MainCallback callback) {
+        this.callback = callback;
+    }
 
     public F1_RecyclerviewAdapter(Context context, FragmentManager fm, LayoutInflater inflater) {
         super();
@@ -54,13 +66,14 @@ public class F1_RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public RecyclerView.ViewHolder onCreateViewHolder(final ViewGroup parent, final int viewType) {
         switch (viewType) {
             case HOT_ITEM:
-                view = inflater.inflate(R.layout.f1_section1, parent,false);
+                view = inflater.inflate(R.layout.f1_section1, parent, false);
                 return new NewItemViewHolder(view);
             case RANKING_ITEM:
-                view = inflater.inflate(R.layout.f1_section2, parent,false);
+                view = inflater.inflate(R.layout.f1_section2, parent, false);
+
                 return new RankingItemViewHolder(view);
             case PICK_ITEM:
-                view = inflater.inflate(R.layout.f1_section3, parent,false);
+                view = inflater.inflate(R.layout.f1_section3, parent, false);
                 return new PickItemViewHolder(view);
             case BANNER_ITEM:
                 view = inflater.inflate(R.layout.f1_section4, parent, false);
@@ -81,10 +94,10 @@ public class F1_RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 final Runnable Update = new Runnable() {
                     @Override
                     public void run() {
-                        if(currentPage == 3) {
+                        if (currentPage == 3) {
                             currentPage = 0;
                         }
-                        newItemViewHolder.viewPager.setCurrentItem(currentPage++,true);
+                        newItemViewHolder.viewPager.setCurrentItem(currentPage++, true);
                     }
                 };
                 timer = new Timer();
@@ -93,19 +106,30 @@ public class F1_RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                     public void run() {
                         handler.post(Update);
                     }
-                },DELAY_MS,PERIOD_MS);
+                }, DELAY_MS, PERIOD_MS);
                 break;
             case 1:
-                RankingItemViewHolder rankingItemViewHolder = (RankingItemViewHolder) holder;
+                final RankingItemViewHolder rankingItemViewHolder = (RankingItemViewHolder) holder;
                 F1_Section2_CardFragmentPagerAdapter pagerAdapter = new F1_Section2_CardFragmentPagerAdapter(fm, dpToPixels(2, context));
                 F1_Section2_ShadowTransformer fragmentCardSection2ShadowTransformer = new F1_Section2_ShadowTransformer(rankingItemViewHolder.viewPager, pagerAdapter);
                 fragmentCardSection2ShadowTransformer.enableScaling(true);
                 rankingItemViewHolder.viewPager.setAdapter(pagerAdapter);
+                Main_Viewpager.ViewPagerCallback callback = new Main_Viewpager.ViewPagerCallback() {
+                    @Override
+                    public boolean viewPagercallback() {
+                        Log.d("CURRENT ITEM",String.valueOf(rankingItemViewHolder.viewPager.getCurrentItem()));
+                        if(rankingItemViewHolder.viewPager.getCurrentItem() != 0 && rankingItemViewHolder.viewPager.getCurrentItem() != getItemCount()-1) {
+                            return NOT_EDGE;
+                        }
+                        return EDGE;
+                    }
+                };
+                ((Main_Viewpager)(((MainActivity)context).findViewById(R.id.main_viewpager))).setCallback(callback);
                 rankingItemViewHolder.viewPager.setPageTransformer(false, fragmentCardSection2ShadowTransformer);
                 rankingItemViewHolder.viewPager.setOffscreenPageLimit(3);
                 break;
             case 2:
-                PickItemViewHolder pickItemViewHolder = (PickItemViewHolder)holder;
+                PickItemViewHolder pickItemViewHolder = (PickItemViewHolder) holder;
                 GridLayoutManager section3LayoutManager = new GridLayoutManager(context.getApplicationContext(), 6);
                 section3LayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
                     @Override
@@ -127,7 +151,7 @@ public class F1_RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
                 pickItemViewHolder.recyclerView.setAdapter(section3RecyclerviewAdapter);
                 break;
             case 3:
-                BannerItemViewHolder bannerItemViewHolder = (BannerItemViewHolder)holder;
+                BannerItemViewHolder bannerItemViewHolder = (BannerItemViewHolder) holder;
                 LinearLayoutManager section4LayoutManager = new LinearLayoutManager(context);
                 F1_Section4_RecyclerviewAdapter section4RecyclerviewAdapter = new F1_Section4_RecyclerviewAdapter(context, inflater);
                 bannerItemViewHolder.recyclerView.setLayoutManager(section4LayoutManager);
@@ -178,8 +202,6 @@ public class F1_RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
     }
 
-
-
     class RankingItemViewHolder extends RecyclerView.ViewHolder {
 
         ViewPager viewPager;
@@ -211,6 +233,10 @@ public class F1_RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             super(itemView);
             recyclerView = (RecyclerView) itemView.findViewById(R.id.section4_recyclerview);
         }
-
     }
+
+    public interface MainCallback {
+        Main_Viewpager mainCallback();
+    }
+
 }

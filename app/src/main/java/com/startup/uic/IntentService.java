@@ -14,6 +14,7 @@ import com.fingerpush.android.FingerPushListener;
 /**
  * Created by 규열 on 2018-01-08.
  */
+/*
 
 public class IntentService extends FingerPushListener {
 
@@ -40,4 +41,4 @@ public class IntentService extends FingerPushListener {
         fingerNotification.showNotification(data, pi);
 
     }
-}
+}*/
