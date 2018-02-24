@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+
+    <com.startup.uic.CustomCardView
+        android:id="@+id/row0_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="1.5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/row0_header"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:background="@color/main_color">
+
+                <TextView
+                    android:id="@+id/row0_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:background="@color/main_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="주문상품 내역 "
+                    app:fontName="Custom1"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/row0_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/row0_title"
+                    android:gravity="center_vertical"
+                    android:text="3"
+                    app:fontName="Custom1"
+                    android:textColor="#ffffff"
+                    android:textSize="17dp" />
+
+                <ImageButton
+                    android:id="@+id/row0_expand_collapse_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/expand_collapse" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/row0_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="34dp"></android.support.v7.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+
+    </com.startup.uic.CustomCardView>
+
+</RelativeLayout>

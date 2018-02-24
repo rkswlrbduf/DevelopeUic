@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+
+    <com.startup.uic.CustomCardView
+        android:id="@+id/row4_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="1.5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp">
+
+            <RelativeLayout
+                android:id="@+id/row4_header"
+                android:layout_width="match_parent"
+                android:layout_height="34dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="@color/main_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="결제수단 선택"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    app:fontName="Custom1" />
+
+                <ImageButton
+                    android:id="@+id/row4_expand_collapse_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/expand_collapse" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="34dp"
+                android:padding="20dp">
+
+                <Button
+                    android:id="@+id/row4_card"
+                    android:layout_width="72dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/gray_border"
+                    android:text="카드"
+                    android:textColor="#ababab"
+                    android:textSize="13dp"
+                    app:fontName="Custom1" />
+
+                <Button
+                    android:id="@+id/row4_nobank"
+                    android:layout_width="72dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/row4_card"
+                    android:background="@drawable/gray_border"
+                    android:text="무통장"
+                    android:textColor="#ababab"
+                    android:textSize="13dp"
+                    app:fontName="Custom1" />
+
+                <Button
+                    android:id="@+id/row4_phone"
+                    android:layout_width="72dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/row4_nobank"
+                    android:background="@drawable/gray_border"
+                    android:text="핸드폰"
+                    android:textColor="#ababab"
+                    android:textSize="13dp"
+                    app:fontName="Custom1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@id/row4_card"
+                    android:layout_marginTop="11dp"
+                    android:text="매출증빙은 카드매출전표(또는 휴대폰결제전표)로 대체합니다."
+                    android:textColor="#6a6a6a"
+                    android:textSize="12dp"
+                    app:fontName="Custom1" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </com.startup.uic.CustomCardView>
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_navigation_layout"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:choiceMode="singleChoice"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/main_drawer_layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#16212b">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/main_drawer_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="35dp"
+            android:src="@drawable/people_1" />
+
+        <TextView
+            android:id="@+id/main_drawer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/main_drawer_image"
+            android:layout_marginTop="7dp"
+            android:gravity="center"
+            android:text="Guest 님"
+            android:textColor="#ffffff"
+            android:textSize="11dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_drawer_name">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_drawer_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="2dp"
+                    android:text="0"
+                    android:textColor="#00c3ff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:paddingTop="2dp"
+                    android:text="장바구니"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_drawer_zzim"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="2dp"
+                    android:text="0"
+                    android:textColor="#00c3ff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:paddingTop="2dp"
+                    android:text="나의 찜"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/main_drawer_delivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|bottom"
+                    android:paddingBottom="2dp"
+                    android:text="0"
+                    android:textColor="#00c3ff"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:paddingTop="2dp"
+                    android:text="배송중"
+                    android:textColor="#ffffff"
+                    android:textSize="9dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/main_drawer_layout_top"
+        android:background="#243340"></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+
+    <com.startup.uic.CustomCardView
+        android:id="@+id/row1_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="1.5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <RelativeLayout
+                android:id="@+id/row1_header"
+                android:layout_width="match_parent"
+                android:layout_height="34dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="@color/main_color"
+                    android:gravity="center_vertical"
+                    app:fontName="Custom1"
+                    android:paddingLeft="10dp"
+                    android:text="포인트"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+                <ImageButton
+                    android:id="@+id/row1_expand_collapse_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/expand_collapse" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="34dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="222"
+                        android:background="@drawable/edittext_box" />
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="72"
+                        android:background="@drawable/order_black_button"
+                        android:text="모두사용"
+                        app:fontName="Custom1"
+                        android:textColor="#ffffff"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/basket_bottom_very_thin_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:gravity="bottom"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="222"
+                        app:fontName="Custom1"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="사용가능 포인트"
+                        android:textColor="#ababab"
+                        android:textSize="14dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="56"
+                        android:gravity="right|bottom"
+                        app:fontName="Custom2"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="1,000"
+                        android:textColor="#2b2b2b"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="16"
+                        app:fontName="Custom1"
+                        android:gravity="bottom"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:paddingLeft="3dp"
+                        android:text="원"
+                        android:textColor="#ababab"
+                        android:textSize="13dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="222"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        app:fontName="Custom1"
+                        android:text="적립 예정 포인트"
+                        android:textColor="#ababab"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="56"
+                        android:gravity="right|center_vertical"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="1,000"
+                        app:fontName="Custom1"
+                        android:textColor="#ababab"
+                        android:textSize="10dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="16"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        app:fontName="Custom1"
+                        android:lineSpacingExtra="0dp"
+                        android:paddingLeft="3dp"
+                        android:text="원"
+                        android:textColor="#ababab"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </com.startup.uic.CustomCardView>
+
+</RelativeLayout>

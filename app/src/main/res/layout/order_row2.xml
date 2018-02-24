@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+
+    <com.startup.uic.CustomCardView
+        android:id="@+id/row2_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="1.5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="196dp">
+
+            <RelativeLayout
+                android:id="@+id/row2_header"
+                android:layout_width="match_parent"
+                android:layout_height="34dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="@color/main_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="총 결제금액"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp"
+                    app:fontName="Custom1" />
+
+                <ImageButton
+                    android:id="@+id/row2_expand_collapse_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/expand_collapse" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="34dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="총 상품금액"
+                        android:textColor="#ababab"
+                        android:textSize="13dp"
+                        app:fontName="Custom1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_toLeftOf="@+id/won1"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="9,000"
+                        android:textColor="#2b2b2b"
+                        android:textSize="13dp"
+                        app:fontName="Custom2" />
+
+                    <TextView
+                        android:id="@+id/won1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="원"
+                        android:textColor="#ababab"
+                        android:textSize="12dp"
+                        app:fontName="Custom1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="배송비"
+                        android:textColor="#ababab"
+                        android:textSize="13dp"
+                        app:fontName="Custom1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_toLeftOf="@+id/won2"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="+ 2,500"
+                        android:textColor="#ababab"
+                        android:textSize="13dp"
+                        app:fontName="Custom1" />
+
+                    <TextView
+                        android:id="@+id/won2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="원"
+                        android:textColor="#ababab"
+                        android:textSize="12dp"
+                        app:fontName="Custom1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="할인금액"
+                        android:textColor="#ababab"
+                        android:textSize="13dp"
+                        app:fontName="Custom1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_toLeftOf="@+id/won3"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="- 0"
+                        android:textColor="#ababab"
+                        android:textSize="13dp"
+                        app:fontName="Custom1" />
+
+                    <TextView
+                        android:id="@+id/won3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="원"
+                        android:textColor="#ababab"
+                        android:textSize="12dp"
+                        app:fontName="Custom1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/black_bottom_border"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="포인트 사용금액"
+                        android:textColor="#ababab"
+                        android:textSize="13dp"
+                        app:fontName="Custom1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="4dp"
+                        android:layout_toLeftOf="@+id/won4"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="- 1,000"
+                        android:textColor="#ababab"
+                        android:textSize="13dp"
+                        app:fontName="Custom1" />
+
+                    <TextView
+                        android:id="@+id/won4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="원"
+                        android:textColor="#ababab"
+                        android:textSize="12dp"
+                        app:fontName="Custom1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="총 결제금액"
+                        android:textColor="#2b2b2b"
+                        android:textSize="14dp"
+                        app:fontName="Custom2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="4dp"
+                        android:layout_toLeftOf="@+id/won5"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="10,500"
+                        android:textColor="#d0011b"
+                        android:textSize="18dp"
+                        app:fontName="Custom2" />
+
+                    <TextView
+                        android:id="@+id/won5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:includeFontPadding="false"
+                        android:lineSpacingExtra="0dp"
+                        android:text="원"
+                        android:textColor="#ababab"
+                        android:textSize="12dp"
+                        app:fontName="Custom1" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.startup.uic.CustomCardView>
+
+</RelativeLayout>

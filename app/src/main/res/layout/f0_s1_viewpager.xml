@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    app:cardElevation="1.25dp"
+    app:cardUseCompatPadding="true"
+    tools:ignore="MissingPrefix">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:paddingTop="18dp"
+        android:background="@drawable/color_border_cardview"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/f0_s1_row1_container"
+            layout="@layout/f0_s1_viewpager_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <include
+            android:id="@+id/f0_s1_row2_container"
+            layout="@layout/f0_s1_viewpager_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/f0_s1_row1_container"
+            android:layout_weight="46" />
+
+        <include
+            android:id="@+id/f0_s1_row3_container"
+            layout="@layout/f0_s1_viewpager_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/f0_s1_row2_container"
+            android:layout_weight="46" />
+
+        <include
+            android:id="@+id/f0_s1_row4_container"
+            layout="@layout/f0_s1_viewpager_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/f0_s1_row3_container"
+            android:layout_weight="46" />
+
+        <include
+            android:id="@+id/f0_s1_row5_container"
+            layout="@layout/f0_s1_viewpager_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/f0_s1_row4_container"
+            android:layout_weight="36" />
+
+        <TextView
+            android:id="@+id/f0_s1_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/f0_s1_row5_container"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="신상품 카테고리 더 보기>"
+            android:textColor="#ababab"
+            android:textSize="10dp"
+            app:fontName="Custom1" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+

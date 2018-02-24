@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5"
+    android:paddingBottom="5dp"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:paddingTop="5dp">
+
+    <com.startup.uic.CustomCardView
+        android:id="@+id/row5_cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="1.5dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="182dp">
+
+            <RelativeLayout
+                android:id="@+id/row5_header"
+                android:layout_width="match_parent"
+                android:layout_height="34dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:background="@color/main_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:text="필수동의 항목"
+                    app:fontName="Custom1"
+                    android:textColor="#ffffff"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="34dp"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:orientation="horizontal">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        app:lottie_fileName="checkbox.json" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:fontName="Custom1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="구매조건 확인 및 결제진행 동의" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="7dp"
+                    android:orientation="horizontal">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        app:lottie_fileName="checkbox.json" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        app:fontName="Custom1"
+                        android:text="개인정보 제 3자 제공 동의" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/basket_bottom_very_thin_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="10dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        app:lottie_fileName="checkbox.json" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:fontName="Custom1"
+                        android:layout_marginLeft="10dp"
+                        android:text="전자금융거래 약관 동의" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:scaleX="2"
+                        android:scaleY="2"
+                        app:lottie_fileName="checkbox.json" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        app:fontName="Custom1"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="전체 동의" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </com.startup.uic.CustomCardView>
+
+</RelativeLayout>

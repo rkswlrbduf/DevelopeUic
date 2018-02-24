@@ -33,8 +33,8 @@ public class Main_DrawerSlideListener implements DrawerLayout.DrawerListener {
         Log.d("TAG", String.valueOf((int)(slideOffset * 255)));
 
         drawerLayout.setBackgroundColor(Color.argb((int)(slideOffset * 255), 0, 195, 255));
-        coordinatorLayout.setScaleX(1 - (0.2f * slideOffset));
-        coordinatorLayout.setScaleY(1 - (0.2f * slideOffset));
+        /*coordinatorLayout.setScaleX(1 - (0.2f * slideOffset));
+        coordinatorLayout.setScaleY(1 - (0.2f * slideOffset));*/
         drawerLayout.bringChildToFront(drawerView);
         drawerLayout.requestLayout();
     }

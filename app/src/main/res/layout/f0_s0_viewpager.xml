@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="276dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/f0_s0_imageview"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="74dp"
+        android:paddingLeft="30dp"
+        android:id="@+id/f0_s0_mainname"
+        android:shadowColor="#000000"
+        android:shadowRadius="24"
+        app:fontName="Custom3"
+        android:text="New Arrival 테스트"
+        android:textColor="#ffffff"
+        android:textSize="24dp"
+        tools:ignore="MissingPrefix" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/f0_s0_subname"
+        android:layout_marginBottom="47dp"
+        android:paddingLeft="30dp"
+        android:shadowColor="#000000"
+        android:shadowRadius="24"
+        android:text="지중해 등 푸른 고등어 같은 원단들"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

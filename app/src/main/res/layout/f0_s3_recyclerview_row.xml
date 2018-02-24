@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/tools"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        card_view:cardElevation="1.25dp"
+        card_view:cardPreventCornerOverlap="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/color_border_cardview">
+
+            <ImageView
+                android:id="@+id/f0_s3_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <LinearLayout
+                android:id="@+id/f0_s3_container"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_below="@id/f0_s3_image"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/f0_s3_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="7dp"
+                    android:layout_weight="2"
+                    android:paddingTop="1.5dp"
+                    android:text="무슨 무슨 원단 이름\n무슨무슨"
+                    android:textColor="#2b2b2b"
+                    android:textSize="11dp"
+                    android:textStyle="bold"
+                    app:fontName="Custom2" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top">
+
+                    <TextView
+                        android:id="@+id/f0_s3_current_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:text="12,000원"
+                        android:textColor="#00c3ff"
+                        android:textSize="9dp"
+                        app:fontName="Custom2" />
+
+                    <TextView
+                        android:id="@+id/f0_s3_before_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/f0_s3_current_price"
+                        android:gravity="top"
+                        android:text="12,000원"
+                        android:textColor="#ababab"
+                        android:textSize="8dp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

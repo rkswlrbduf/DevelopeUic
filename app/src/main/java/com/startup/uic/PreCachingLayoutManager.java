@@ -9,20 +9,21 @@ import android.util.AttributeSet;
  * Created by 규열 on 2018-01-19.
  */
 
-public class CustomLayoutManager extends LinearLayoutManager {
 
-    private static final int DEFAULT_EXTRA_LAYOUT_SPACE = 600;
-    private int extraLayoutSpace;
 
-    public CustomLayoutManager(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+public class PreCachingLayoutManager extends LinearLayoutManager {
+
+    private int extraLayoutSpace = -1;
+
+    public PreCachingLayoutManager(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
 
-    public CustomLayoutManager(Context context, int orientation, boolean reverseLayout) {
+    public PreCachingLayoutManager(Context context, int orientation, boolean reverseLayout) {
         super(context, orientation, reverseLayout);
     }
 
-    public CustomLayoutManager(Context context) {
+    public PreCachingLayoutManager(Context context) {
         super(context);
     }
 
@@ -35,6 +36,7 @@ public class CustomLayoutManager extends LinearLayoutManager {
         if(extraLayoutSpace > 0) {
             return extraLayoutSpace;
         }
-        return DEFAULT_EXTRA_LAYOUT_SPACE;
+        return super.getExtraLayoutSpace(state);
     }
+
 }
