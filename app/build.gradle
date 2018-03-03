@@ -47,6 +47,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.34'
     compile 'com.airbnb.android:lottie:2.5.0-rc1'
+    compile 'com.github.w446108264:ScrollableLayout:1.0.3'
     compile 'com.google.code.gson:gson:2.8.2'
 }
 //apply plugin: 'com.google.gms.google-services'

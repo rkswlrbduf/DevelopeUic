@@ -6,5 +6,6 @@
     android:gravity="center"
     android:textColor="#2b2b2b"
     android:singleLine="true"
+    android:text="test"
     android:background="#ffffffff"
     android:textSize="11dp" />

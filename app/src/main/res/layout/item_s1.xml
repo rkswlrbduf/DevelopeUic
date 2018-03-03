@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/item_s1_imageview"
+        android:layout_width="match_parent"
+        android:layout_height="414dp"
+        android:background="#1ad7d5"
+        app:layout_collapseMode="parallax"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/item_s1_name"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="무슨무슨 원단 이름무슨무슨 원단 이름 이게 두줄로 넘어가면 이렇게 됨"
+        android:textColor="#2b2b2b"
+        android:textSize="16sp"
+        app:fontName="Custom2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_s1_imageview" />
+
+    <TextView
+        android:id="@+id/item_s1_price"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:lineSpacingExtra="0dp"
+        android:text="12,000원"
+        android:textColor="#00c3ff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_s1_name" />
+
+    <TextView
+        android:id="@+id/item_s1_배송비"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:text="배송비"
+        android:textColor="#ababab"
+        android:textSize="12sp"
+        app:fontName="Custom2"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/item_s1_delivery_price"
+        app:layout_constraintTop_toBottomOf="@+id/item_s1_price" />
+
+    <TextView
+        android:id="@+id/item_s1_delivery_price"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="21dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="10dp"
+        android:text="2500원"
+        android:textColor="#ababab"
+        android:textSize="12sp"
+        app:fontName="Custom1"
+        app:layout_constraintBottom_toTopOf="@+id/item_s1_space"
+        app:layout_constraintLeft_toRightOf="@+id/item_s1_배송비"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_s1_price" />
+
+    <View
+        android:id="@+id/item_s1_space"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="#f5f5f5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/item_s1_delivery_price" />
+
+</android.support.constraint.ConstraintLayout>

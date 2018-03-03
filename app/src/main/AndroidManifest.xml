@@ -15,14 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup">
-        <activity android:name="com.startup.uic.MainActivity"/>
-        <activity android:name=".Splash" android:theme="@style/SplashTheme">
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ItemActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Splash" android:theme="@style/SplashTheme"/>
         <activity android:name=".BasketActivity"/>
         <activity android:name=".OrderActivity"/>
 <!--        <service android:name=".IntentService">

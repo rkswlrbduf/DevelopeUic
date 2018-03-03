@@ -15,7 +15,7 @@
         android:background="#ffffff"
         android:descendantFocusability="blocksDescendants">
 
-        <com.startup.uic.Main_ViewPager
+        <com.startup.uic.Horizontal_ViewPager
             android:id="@+id/main_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,9 +42,10 @@
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="10dp"
-                    app:lottie_fileName="hamburger.json"/>
+                    app:lottie_fileName="hamburger.json" />
 
                 <EditText
+                    android:id="@+id/search"
                     android:layout_width="wrap_content"
                     android:layout_height="26dp"
                     android:layout_centerInParent="true"
@@ -68,11 +69,11 @@
                     android:id="@+id/main_bag"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:paddingLeft="14dp"
-                    android:paddingRight="17dp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:background="@android:color/transparent"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="17dp"
                     android:src="@drawable/shopping_bag" />
 
                 <TextView
@@ -94,9 +95,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="#ffffff"
-                app:tabPaddingStart="0dp"
+                app:elevation="0dp"
                 app:tabPaddingEnd="0dp"
-                app:elevation="0dp"></android.support.design.widget.TabLayout>
+                app:tabPaddingStart="0dp"></android.support.design.widget.TabLayout>
 
         </android.support.design.widget.AppBarLayout>
 
