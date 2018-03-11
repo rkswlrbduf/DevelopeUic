@@ -106,7 +106,7 @@ public class MainActivity extends Main_Font_AppCompatFontActivity implements Tab
         tabLayout.addTab(tabLayout.newTab().setCustomView(InflateTab(getApplicationContext(), "땡처리")));
         tabLayout.addTab(tabLayout.newTab().setCustomView(InflateTab(getApplicationContext(), "패키지")));
         tabLayout.addTab(tabLayout.newTab().setCustomView(InflateTab(getApplicationContext(), "이벤트")));
-        tabLayout.setSelectedTabIndicatorHeight((int) dpToPixels(3, getApplicationContext()));
+        //tabLayout.setSelectedTabIndicatorHeight((int) dpToPixels(3, getApplicationContext()));
         tabLayout.setSelectedTabIndicatorColor(MAIN_COLOR);
         ((TextView) tabLayout.getTabAt(0).getCustomView().findViewById(R.id.tabText)).setTextColor(SELECTED_COLOR);
         tabLayout.setOnTabSelectedListener(this);

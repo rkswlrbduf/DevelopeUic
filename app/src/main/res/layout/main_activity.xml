@@ -5,6 +5,7 @@
     android:id="@+id/main_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     android:fitsSystemWindows="true"
     tools:context="com.startup.uic.MainActivity">
 
@@ -23,16 +24,16 @@
 
         <android.support.design.widget.AppBarLayout
             android:id="@+id/appbar"
+            android:background="#d5d5d5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="36dp"
             app:elevation="0dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:background="#ffffff"
-                android:elevation="1dp"
+                android:elevation="0dp"
                 app:layout_scrollFlags="scroll|enterAlways">
 
                 <com.airbnb.lottie.LottieAnimationView
@@ -94,8 +95,10 @@
                 android:id="@+id/main_tablayout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:background="#ffffff"
+                android:background="@drawable/basket_bottom_very_thin_border"
+                android:padding="0.5dp"
                 app:elevation="0dp"
+                app:tabIndicatorHeight="0dp"
                 app:tabPaddingEnd="0dp"
                 app:tabPaddingStart="0dp"></android.support.design.widget.TabLayout>
 

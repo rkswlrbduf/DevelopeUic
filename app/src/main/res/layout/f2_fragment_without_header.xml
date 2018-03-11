@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/f2_constraint"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/f2_header"
+        android:layout_width="match_parent"
+        android:layout_height="72dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingEnd="19dp"
+            android:paddingLeft="19dp"
+            android:paddingRight="19dp"
+            android:paddingStart="19dp">
+
+            <TextView
+                android:id="@+id/f2_category1"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:background="@drawable/blue_bottom_border"
+                android:gravity="center"
+                android:text="면원단"
+                android:textColor="#00c3ff"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/f2_category2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/f2_category2"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:background="@drawable/blue_bottom_border"
+                android:gravity="center"
+                android:text="린넨"
+                android:textColor="#2b2b2b"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toRightOf="@+id/f2_category1"
+                app:layout_constraintRight_toLeftOf="@+id/f2_category3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/f2_category3"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:background="@drawable/blue_bottom_border"
+                android:gravity="center"
+                android:text="레이스/자수"
+                android:textColor="#2b2b2b"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toRightOf="@+id/f2_category2"
+                app:layout_constraintRight_toLeftOf="@+id/f2_category4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/f2_category4"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:background="@drawable/blue_bottom_border"
+                android:gravity="center"
+                android:text="북유럽"
+                android:textColor="#2b2b2b"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toRightOf="@+id/f2_category3"
+                app:layout_constraintRight_toLeftOf="@+id/f2_category5"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/f2_category5"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:background="@drawable/blue_bottom_border"
+                android:gravity="center"
+                android:text="외부원단"
+                android:textColor="#2b2b2b"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toRightOf="@+id/f2_category4"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/f2_category6"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="계절원단"
+                android:textColor="#2b2b2b"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/f2_category7"
+                app:layout_constraintTop_toBottomOf="@+id/f2_category1" />
+
+            <TextView
+                android:id="@+id/f2_category7"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="방수/특수원단"
+                android:textColor="#2b2b2b"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toRightOf="@id/f2_category6"
+                app:layout_constraintRight_toLeftOf="@+id/f2_category8"
+                app:layout_constraintTop_toBottomOf="@+id/f2_category1" />
+
+            <TextView
+                android:id="@+id/f2_category8"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="커튼원단"
+                android:textColor="#2b2b2b"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toRightOf="@id/f2_category7"
+                app:layout_constraintRight_toLeftOf="@+id/f2_category9"
+                app:layout_constraintTop_toBottomOf="@+id/f2_category1" />
+
+            <TextView
+                android:id="@+id/f2_category9"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:gravity="center"
+                android:text="누빔원단"
+                android:textColor="#2b2b2b"
+                android:textSize="11dp"
+                app:layout_constraintLeft_toRightOf="@id/f2_category8"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/f2_category1" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/basket_bottom_very_very_thin_border" />
+
+    </FrameLayout>
+
+    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/f2_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#f5f5f5"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/f2_recyclerview_row"></android.support.v7.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/f2_button"
+        android:layout_width="30dp"
+        android:layout_height="16dp"
+        android:rotation="180"
+        android:background="@drawable/round_bottom_container"
+        android:src="@drawable/f2_arrow"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
